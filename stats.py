@@ -29,8 +29,11 @@ letter_dict = {
 
 def count_chars(txt):
     for i in txt:
+        if i.isupper():
+            i = i.lower()
         if i in letter_dict:
-            letter_dict[i] + 1
+            letter_dict[i] += 1
+    return(letter_dict)
 
 def count_words(txt):
     words_split = txt.split()
