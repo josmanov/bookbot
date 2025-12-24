@@ -24,8 +24,25 @@ letter_dict = {
     'w': 0, 
     'x': 0, 
     'y': 0, 
-    'z': 0 
+    'z': 0,
+    'æ': 0,
+    'â': 0,
+    'ê': 0,
+    'ë': 0,
+    'ô': 0,
 }
+
+def sort_on(items):
+    return items["num"]
+
+def sort_nbr(char_dict):
+    new_sorted_list = []
+
+    for i in char_dict:
+        c = i
+        num = char_dict[i]
+        new_sorted_list.append({'char': c, "num": num})
+    return (new_sorted_list)
 
 def count_chars(txt):
     for i in txt:
